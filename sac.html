@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Sac Gymie — 349 DH · Livraison incluse</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="produit.css">
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="index.html" class="logo"><span class="l1">g</span><span class="l2">y</span><span class="l3">m</span><span class="l4">i</span><span class="l5">e</span></a>
+  <a href="index.html" class="back">← Retour</a>
+</div></nav>
+
+<main class="wrap pdp">
+  <div class="gallery">
+    <div class="hero"><img id="hero" src="assets/colors_clean/rose.webp" alt="Le Sac Gymie - Rose poudré"></div>
+  </div>
+
+  <div class="info">
+    <span class="eyebrow">LE SAC GYMIE</span>
+    <h1>Le sac de sport qui sépare le propre du sale.</h1>
+    <p class="lead">Un compartiment chaussures ventilé, une poche séparée pour le linge humide, et un grand espace principal. Format compact, idéal pour les casiers.</p>
+
+    <div class="price"><span class="now">349 DH</span><span class="old">499 DH</span><span class="save">-30%</span></div>
+    <div class="ship">Livraison gratuite partout au Maroc · 24–48h</div>
+
+    <div class="swatches">
+      <span class="lbl">Couleur : <span id="cname">Rose poudré</span></span>
+      <div class="sw-row" id="swatches">
+        <span class="sw on" style="background:#E89CAE" data-img="assets/colors_clean/rose.webp" data-name="Rose poudré"></span>
+        <span class="sw" style="background:#A9C4DE" data-img="assets/colors_clean/bleu.webp" data-name="Bleu ciel"></span>
+        <span class="sw" style="background:#2C2C2C" data-img="assets/colors_clean/noir.webp" data-name="Noir"></span>
+        <span class="sw" style="background:#E4D5C3" data-img="assets/colors_clean/beige.webp" data-name="Beige sable"></span>
+        <span class="sw" style="background:#EBD98C" data-img="assets/colors_clean/jaune.webp" data-name="Jaune pastel"></span>
+      </div>
+    </div>
+
+    <ul class="feats">
+      <li><b>Compartiment chaussures</b> — ventilé et isolé du reste du sac</li>
+      <li><b>Poche linge humide</b> — séparée, pour la tenue mouillée après l'effort</li>
+      <li><b>Compartiment principal</b> — spacieux, pour vos vêtements propres</li>
+      <li><b>Nylon résistant</b> — léger et facile à nettoyer</li>
+      <li><b>Zips renforcés</b> — fluides et solides</li>
+      <li><b>Format compact</b> — pensé pour les casiers de salle</li>
+    </ul>
+
+    <a class="btn-cta" id="cta" href="#">Commander sur WhatsApp — 349 DH</a>
+    <div class="cod"><span>💵 Paiement à la livraison</span><span>🚚 Livraison incluse</span><span>🔒 Garantie 7 jours</span></div>
+  </div>
+</main>
+
+<div class="mbuy"><a class="btn-cta" id="ctaMobile" href="#">Commander — 349 DH</a></div>
+
+<script>
+const PHONE='212698040572';
+let color='Rose poudré';
+function waLink(){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent('Salam ! Je veux commander Le Sac Gymie en couleur '+color+' — 349 DH (livraison incluse)');}
+function refresh(){document.getElementById('cta').href=waLink();document.getElementById('ctaMobile').href=waLink();}
+document.querySelectorAll('#swatches .sw').forEach(s=>{
+  s.addEventListener('click',()=>{
+    document.querySelectorAll('#swatches .sw').forEach(x=>x.classList.remove('on'));
+    s.classList.add('on');
+    document.getElementById('hero').src=s.dataset.img;
+    color=s.dataset.name;
+    document.getElementById('cname').textContent=color;
+    refresh();
+  });
+});
+refresh();
+</script>
+</body>
+</html>

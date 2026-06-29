@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYMIE — Vue 360°</title>
+<style>
+:root{--fuchsia:#C2456B;--rose-light:#FBE7ED;--ink:#33242A;--muted:#8A7378;--line:#EFDDE2;--beige:#FAF6F3}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'DM Sans',system-ui,sans-serif}
+body{background:var(--beige);color:var(--ink);display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}
+
+.spin360{max-width:560px;width:100%}
+.spin360 h2{font-size:22px;font-weight:800;text-align:center;margin-bottom:4px}
+.spin360 .hint{text-align:center;color:var(--muted);font-size:13px;margin-bottom:16px}
+
+.spin-stage{position:relative;aspect-ratio:1/1;border-radius:22px;overflow:hidden;background:var(--rose-light);
+  border:1px solid var(--line);cursor:grab;touch-action:pan-y;user-select:none}
+.spin-stage.dragging{cursor:grabbing}
+.spin-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .04s linear;pointer-events:none}
+.spin-stage img.on{opacity:1}
+.spin-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);
+  border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;color:var(--fuchsia);
+  display:flex;align-items:center;gap:6px;pointer-events:none}
+.spin-badge svg{width:14px;height:14px;stroke:var(--fuchsia);fill:none;stroke-width:2}
+.spin-loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+
+.spin-bar{display:flex;align-items:center;gap:12px;margin-top:14px}
+.spin-bar input{flex:1;accent-color:var(--fuchsia)}
+.spin-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;
+  color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.spin-btn svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:2}
+</style>
+</head>
+<body>
+<div class="spin360">
+  <h2>Le sac Gymie en 360°</h2>
+  <p class="hint">Glissez pour faire tourner — ou laissez-le tourner tout seul.</p>
+
+  <div class="spin-stage" id="stage">
+    <div class="spin-loader" id="loader">Chargement…</div>
+    <div class="spin-badge"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 3 21 9 15 9"/></svg> 360°</div>
+  </div>
+
+  <div class="spin-bar">
+    <button class="spin-btn" id="toggle"><svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg> Pause</button>
+    <input type="range" id="scrub" min="0" max="23" value="0">
+  </div>
+</div>
+
+<script>
+/* ── CONFIG ──
+   Pose tes photos dans assets/spin/ nommées frame_01.webp ... frame_NN.webp
+   (séquence d'angles réguliers autour du sac, fond neutre). Ajuste FRAMES et EXT. */
+const FRAMES = 24;
+const DIR = 'assets/spin/';
+const PREFIX = 'frame_';
+const EXT = '.webp';
+
+const stage = document.getElementById('stage');
+const loader = document.getElementById('loader');
+const scrub = document.getElementById('scrub');
+const toggle = document.getElementById('toggle');
+
+let imgs = [], cur = 0, loaded = 0, playing = true, autoTimer = null;
+
+function pad(n){return String(n).padStart(2,'0');}
+
+for(let i=1;i<=FRAMES;i++){
+  const im = new Image();
+  im.className = 'imgframe';
+  im.alt = 'Sac Gymie vue ' + i;
+  im.src = DIR + PREFIX + pad(i) + EXT;
+  im.onload = ()=>{ if(++loaded===FRAMES){ loader.style.display='none'; } };
+  im.onerror = ()=>{ if(++loaded===FRAMES){ loader.style.display='none'; } };
+  stage.appendChild(im);
+  imgs.push(im);
+}
+scrub.max = FRAMES - 1;
+
+function show(idx){
+  cur = ((idx % FRAMES) + FRAMES) % FRAMES;
+  imgs.forEach((im,j)=> im.classList.toggle('on', j===cur));
+  scrub.value = cur;
+}
+show(0);
+
+/* auto rotate */
+function play(){ playing=true; toggle.innerHTML='<svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg> Pause';
+  clearInterval(autoTimer); autoTimer=setInterval(()=>show(cur+1),90); }
+function pause(){ playing=false; toggle.innerHTML='<svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg> Lecture'; clearInterval(autoTimer); }
+toggle.addEventListener('click', ()=> playing?pause():play());
+play();
+
+/* drag to rotate */
+let dragging=false, startX=0, startFrame=0;
+function down(x){ dragging=true; startX=x; startFrame=cur; stage.classList.add('dragging'); pause(); }
+function move(x){ if(!dragging) return; const dx=x-startX; const step=Math.round(dx / (stage.clientWidth/FRAMES)); show(startFrame - step); }
+function up(){ dragging=false; stage.classList.remove('dragging'); }
+stage.addEventListener('mousedown', e=>down(e.clientX));
+window.addEventListener('mousemove', e=>move(e.clientX));
+window.addEventListener('mouseup', up);
+stage.addEventListener('touchstart', e=>down(e.touches[0].clientX), {passive:true});
+stage.addEventListener('touchmove', e=>move(e.touches[0].clientX), {passive:true});
+stage.addEventListener('touchend', up);
+scrub.addEventListener('input', ()=>{ pause(); show(parseInt(scrub.value,10)); });
+</script>
+</body>
+</html>

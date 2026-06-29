@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYMIE — Le sac de sport malin pour les sportives</title>
+<meta name="description" content="GYMIE : un sac de sport simple et pratique avec compartiment chaussures ventilé et poche séparée, plus une serviette de banc. Plusieurs couleurs. Paiement à la livraison partout au Maroc.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="GYMIE — Le sac de sport malin pour les sportives">
+<meta property="og:description" content="Sac à compartiments séparés (chaussures, linge humide) + serviette de banc. Paiement à la livraison au Maroc.">
+<meta property="og:image" content="assets/webp/shoe_pocket.webp">
+<meta property="og:locale" content="fr_MA">
+<meta name="theme-color" content="#C2456B">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette rose sportive, simple (sans bordeaux/doré) */
+  --beige:#FAF6F3; --beige2:#F3E9E6; --surface:#FFFFFF;
+  --rose:#E89CAE; --rose-light:#FBE7ED;
+  --fuchsia:#C2456B; --fuchsia-deep:#9B2F4E;
+  --grad:linear-gradient(135deg,#E89CAE 0%,#C2456B 100%);
+  --grad-soft:linear-gradient(160deg,#FDF3F6 0%,#FBE7ED 100%);
+  --ink:#33242A; --muted:#8A7378; --line:#EFDDE2;
+  --whatsapp:#25D366; --ok:#7FA88B;
+  --r:16px; --r-lg:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--beige);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'DM Sans',sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+.media{overflow:hidden;background:var(--grad-soft);position:relative}
+.imgfill{width:100%;height:100%;object-fit:cover}
+
+/* ── ANNOUNCEMENT ── */
+.annbar{background:var(--grad);color:#fff;text-align:center;padding:9px 16px;font-size:13px;font-weight:600;letter-spacing:.02em}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:90;background:rgba(250,246,243,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:800;letter-spacing:-.01em;color:var(--fuchsia)}
+.logo i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--grad);margin-left:1px}
+.nav-links{display:flex;gap:26px;list-style:none;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;text-decoration:none;font-family:'DM Sans',sans-serif;font-weight:700;border-radius:999px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-sm{padding:10px 20px;font-size:14px}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* ── PDP LAYOUT ── */
+.pdp{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:36px 20px 60px}
+@media(max-width:900px){.pdp{grid-template-columns:1fr;gap:26px;padding:18px 20px 44px}}
+
+.gallery{position:sticky;top:86px;align-self:start}
+@media(max-width:900px){.gallery{position:static}}
+.g-main{aspect-ratio:1/1;border-radius:var(--r-lg)}
+.g-thumbs{display:flex;gap:10px;margin-top:12px}
+.g-thumbs .media{flex:1;width:auto;height:auto;aspect-ratio:1/1;border-radius:12px;cursor:pointer;border:1.5px solid var(--line)}
+.g-thumbs .media.on{border:2px solid var(--fuchsia)}
+
+/* mobile fit polish (≤480px) */
+@media(max-width:480px){
+  .wrap{padding:0 16px}
+  .pdp{padding:14px 16px 36px;gap:20px}
+  .g-thumbs{gap:8px}
+  .g-thumbs .media{width:auto;height:auto;flex:1;aspect-ratio:1/1}
+  .buy h1{font-size:1.55rem}
+  .variants{gap:7px}
+  .vcard{padding:8px}
+  .vcard b{font-size:12px}
+  .vcard small{font-size:10.5px}
+  .cta-main{padding:15px;font-size:15px}
+  .cod-note{gap:8px;font-size:11.5px}
+  .ugc-card{flex-basis:108px}
+}
+
+.badge-sale{display:inline-block;background:var(--fuchsia);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;padding:4px 10px;border-radius:6px;margin-bottom:14px}
+.social{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.social .dot{width:9px;height:9px;border-radius:50%;background:var(--grad);flex:none}
+.social span{font-size:13.5px;color:var(--muted)}
+.social b{color:var(--ink)}
+.buy h1{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:8px;color:var(--ink)}
+.sub{color:var(--muted);font-size:15px;margin-bottom:16px;line-height:1.55}
+.checks{list-style:none;margin-bottom:22px}
+.checks li{display:flex;gap:10px;align-items:center;padding:5px 0;font-size:15px;font-weight:600}
+.checks li::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--grad);flex:none;
+  -webkit-mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/100% no-repeat;
+  mask:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/100% no-repeat}
+
+/* color swatches */
+.swatches{display:flex;gap:8px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.swatches .lbl{font-size:13px;color:var(--muted);margin-right:4px}
+.sw{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+
+/* variants */
+.variants{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+.vcard{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:10px;text-align:center;cursor:pointer;transition:border-color .15s,box-shadow .15s;position:relative}
+.vcard .media{aspect-ratio:1/1;border-radius:10px;margin-bottom:8px}
+.vcard b{font-size:13px;display:block}
+.vcard small{color:var(--muted);font-size:11.5px;line-height:1.4}
+.vcard small s{opacity:.6;margin-right:3px}
+.vcard small .now{color:var(--fuchsia);font-weight:700}
+.vcard small .ship{color:var(--ok);font-weight:600}
+.vcard.on{border-color:var(--fuchsia);box-shadow:0 0 0 3px rgba(194,69,107,.18)}
+.vcard .tag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+
+/* CTA */
+.btn-cta{position:relative;overflow:hidden;color:#fff;background:var(--grad);
+  box-shadow:0 6px 18px rgba(194,69,107,.32)}
+.btn-cta:hover{box-shadow:0 10px 24px rgba(194,69,107,.42)}
+.btn-cta:active{transform:scale(.98)}
+.cta-main{width:100%;padding:17px;font-size:16.5px;border-radius:999px;flex-wrap:wrap}
+.cta-main s{opacity:.7;font-weight:500;margin-left:6px}
+.cta-price{white-space:nowrap}
+.cod-note{display:flex;justify-content:center;gap:14px;font-size:12.5px;color:var(--muted);margin:10px 0 18px;flex-wrap:wrap}
+
+/* UGC portrait carousel */
+.ugc{margin:0 0 22px}
+.ugc-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.ugc-head span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.ugc-head small{font-size:12px;color:var(--muted)}
+.ugc-track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.ugc-track::-webkit-scrollbar{height:5px}
+.ugc-track::-webkit-scrollbar-thumb{background:var(--fuchsia);border-radius:99px}
+.ugc-track::-webkit-scrollbar-track{background:var(--line);border-radius:99px}
+.ugc-card{flex:0 0 130px;aspect-ratio:3/4;border-radius:14px;overflow:hidden;scroll-snap-align:start;background:var(--grad-soft);border:1px solid var(--line)}
+.ugc-card img{width:100%;height:100%;object-fit:cover}
+@media(max-width:520px){.ugc-card{flex-basis:112px}}
+
+.blist{display:flex;flex-direction:column;gap:12px}
+.bi{display:flex;gap:12px;align-items:flex-start}
+.bi .ic{flex:none;width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--rose-light)}
+.bi .ic svg{width:19px;height:19px;stroke:var(--fuchsia);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.bi b{display:block;color:var(--ink);font-size:14px}
+.bi span{font-size:13px;color:var(--muted);line-height:1.45}
+
+.guarantee{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:24px;font-size:13.5px;color:var(--muted)}
+.guarantee .gic{width:46px;height:46px;border-radius:50%;flex:none;background:var(--rose-light);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--fuchsia);font-weight:800}
+.guarantee b{color:var(--ink)}
+
+.acc{border-top:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:16px 2px;font-size:13px;font-weight:700;letter-spacing:.1em}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font-size:20px;font-weight:400;color:var(--fuchsia)}
+.acc[open] summary::after{content:"–"}
+.acc .acc-body{padding:0 2px 18px;font-size:14.5px;line-height:1.65;color:var(--muted)}
+.acc .acc-body b{color:var(--ink)}
+
+/* ── PROBLEM ── */
+.prob{padding:68px 0;background:var(--beige)}
+.prob .wrap{max-width:1000px}
+.eyebrow{display:block;text-align:center;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--fuchsia);margin-bottom:10px}
+.prob h2{font-size:clamp(1.8rem,4vw,2.5rem);text-align:center;margin-bottom:8px;color:var(--ink)}
+.prob .lead{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 38px;font-size:15.5px;line-height:1.6}
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.ps-grid{grid-template-columns:1fr}}
+.ps{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;gap:14px}
+.ps .pp{display:flex;gap:12px;align-items:flex-start}
+.ps .pp .em{font-size:22px;flex:none;line-height:1.2}
+.ps .pp .tx b{display:block;font-size:16px;font-weight:700;margin-bottom:3px}
+.ps .pp .tx p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.ps .arrow{align-self:center;width:30px;height:30px;border-radius:50%;background:var(--rose-light);display:flex;align-items:center;justify-content:center;color:var(--fuchsia);font-weight:800}
+.ps .sol{display:flex;gap:12px;align-items:flex-start;background:var(--rose-light);border-radius:14px;padding:14px;margin:-2px -2px 0}
+.ps .sol .em{font-size:20px;flex:none}
+.ps .sol .tx b{display:block;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.ps .sol .tx p{font-size:13px;color:#7a505f;line-height:1.5}
+
+/* before / after band */
+.ba-band{max-width:1000px;margin:36px auto 0;padding:0 20px}
+.ba-band .media{aspect-ratio:3/2;border-radius:var(--r-lg)}
+.ba-band p{text-align:center;font-size:13.5px;color:var(--muted);margin-top:12px}
+
+/* ── HOW ── */
+.how{padding:74px 0}
+.how .eyebrow{margin-bottom:10px}
+.how h2{font-size:clamp(1.8rem,4vw,2.5rem);text-align:center;margin-bottom:8px;color:var(--ink)}
+.how .lead{text-align:center;color:var(--muted);max-width:540px;margin:0 auto 46px;font-size:15.5px;line-height:1.6}
+.steps{display:flex;flex-direction:column;gap:14px;max-width:920px;margin:0 auto}
+.step{display:grid;grid-template-columns:60px 1.1fr .9fr;gap:24px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px}
+@media(max-width:760px){.step{grid-template-columns:46px 1fr;gap:16px;padding:18px}.step .step-img{display:none}}
+.step .num{width:60px;height:60px;border-radius:16px;background:var(--grad);color:#fff;font-weight:800;font-size:26px;display:flex;align-items:center;justify-content:center}
+.step .step-tx h3{font-size:20px;margin-bottom:6px;color:var(--ink)}
+.step .step-tx p{font-size:14.5px;color:var(--muted);line-height:1.55}
+.step .step-tx .tag{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--fuchsia);background:var(--rose-light);padding:4px 12px;border-radius:999px}
+.step .step-img{aspect-ratio:4/3;border-radius:14px}
+.how-note{text-align:center;max-width:600px;margin:32px auto 0;font-size:14px;color:var(--muted);background:var(--rose-light);border-radius:var(--r);padding:18px 22px;line-height:1.6}
+.how-note b{color:var(--ink)}
+
+/* ── FEATURE ROWS ── */
+.app {
+  padding: 84px 0;
+  background: #F7F1F2;
+  color: #2F2528;
+}
+.app .eyebrow {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #D95C87;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.app h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 8px;
+  color: #2F2528;
+  font-weight: 500;
+}
+.app .lead {
+  text-align: center;
+  color: rgba(47, 37, 40, 0.7);
+  max-width: 580px;
+  margin: 0 auto 56px;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+.app-row {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 56px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media(max-width: 860px) {
+  .app-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 0 20px;
+  }
+}
+.app-tx {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.app-tx .who {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #D95C87;
+  background: #FCEEF2;
+  padding: 6px 14px;
+  border-radius: 99px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+.app-tx h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2F2528;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.app-tx > p {
+  font-size: 15px;
+  color: rgba(47, 37, 40, 0.7);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.app-feats {
+  list-style: none;
+  margin-bottom: 26px;
+  width: 100%;
+}
+.app-feats li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14.5px;
+  color: #2F2528;
+  font-weight: 500;
+}
+.app-feats li::before {
+  content: "✓";
+  color: #D95C87;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Sole card styling */
+.sole-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(47, 37, 40, 0.02), 0 1px 3px rgba(47, 37, 40, 0.01);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(47, 37, 40, 0.04);
+  width: 100%;
+}
+.sole-card-left {
+  width: 54px;
+  flex-shrink: 0;
+}
+.sole-card-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sole-card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sole-card-right h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #2F2528;
+  line-height: 1.35;
+}
+.sole-card-right p {
+  font-size: 13px;
+  color: rgba(47, 37, 40, 0.65);
+  line-height: 1.45;
+}
+
+/* Right side cutaway */
+.cutaway-container {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(47, 37, 40, 0.04), 0 1px 3px rgba(47, 37, 40, 0.01);
+  border: 1px solid rgba(47, 37, 40, 0.05);
+}
+.cutaway-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── COLORWAYS BAND ── */
+.colors {
+  padding: 80px 0;
+  background: var(--beige2);
+}
+.colors .eyebrow {
+  margin-bottom: 12px;
+  color: var(--fuchsia);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  display: block;
+  text-align: center;
+}
+.colors h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.colors .lead {
+  text-align: center;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  font-size: 16px;
+}
+
+.cw-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+@media(max-width: 860px) {
+  .cw-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 0 20px;
+  }
+}
+
+/* Left Side: Hero Image */
+.cw-hero {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02);
+  border: 1px solid var(--line);
+}
+.cw-hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  z-index: 1;
+}
+.cw-hero-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Right Side: Configurator Cards */
+.cw-config {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Color cards stack */
+.cw-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Mobile horizontal scroll */
+@media(max-width: 860px) {
+  .cw-options {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 4px 20px;
+    gap: 14px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cw-options::-webkit-scrollbar {
+    height: 5px;
+  }
+  .cw-options::-webkit-scrollbar-thumb {
+    background: var(--fuchsia);
+    border-radius: 99px;
+  }
+}
+
+/* Color card styling */
+.cw-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+@media(max-width: 860px) {
+  .cw-card {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+  }
+}
+
+.cw-card:hover {
+  border-color: var(--fuchsia);
+  transform: translateY(-2px);
+}
+
+/* Active selected state */
+.cw-card.selected {
+  border-color: var(--fuchsia);
+  box-shadow: 0 8px 24px rgba(194, 27, 87, 0.08), 0 2px 4px rgba(194, 27, 87, 0.02);
+  transform: scale(1.02);
+}
+
+@media(max-width: 860px) {
+  .cw-card.selected {
+    transform: scale(1.02);
+  }
+}
+
+/* Color Swatch */
+.cw-swatch-container {
+  position: relative;
+}
+.cw-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Hover Preview Image Above Swatch */
+.cw-preview {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+  background: var(--surface);
+}
+.cw-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cw-swatch-container:hover .cw-preview {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Text info */
+.cw-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cw-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.cw-badge {
+  font-size: 12px;
+  color: var(--muted);
+}
+.cw-card.selected .cw-badge {
+  color: var(--fuchsia);
+  font-weight: 500;
+}
+
+/* Check / Selected status */
+.cw-status {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--fuchsia);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  text-transform: uppercase;
+}
+.cw-card.selected .cw-status {
+  opacity: 1;
+}
+.cw-status svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* Checklist below configurator */
+.cw-features {
+  margin-top: 25px;
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+}
+.cw-feat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+@media(max-width: 500px) {
+  .cw-feat-list {
+    grid-template-columns: 1fr;
+  }
+}
+.cw-feat-list li {
+  font-size: 14.5px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.cw-feat-list li::before {
+  content: "✓";
+  color: var(--fuchsia);
+  font-weight: 800;
+}
+.cw-features .cw-subtext {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  display: block;
+}
+
+/* Mobile Sticky Configurator Bottom Bar */
+.cw-mobile-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  z-index: 96;
+  padding: 12px 20px;
+  display: none;
+  animation: slideUp 0.3s forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.cw-mbar-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cw-mbar-details {
+  display: flex;
+  flex-direction: column;
+}
+.cw-mbar-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.cw-mbar-price {
+  font-size: 13px;
+  color: var(--muted);
+}
+.cw-mbar-price span {
+  color: var(--fuchsia);
+  font-weight: 700;
+}
+.cw-mbar-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* ── SCENARIOS ── */
+.results{padding:60px 0;background:var(--beige2)}
+.results h2{font-size:clamp(1.8rem,4vw,2.5rem);text-align:center;margin-bottom:10px;color:var(--ink)}
+.results .lead{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 34px;font-size:15px}
+.r-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 18px;max-width:1180px;margin:0 auto}
+.r-track::-webkit-scrollbar{height:6px}
+.r-track::-webkit-scrollbar-thumb{background:var(--fuchsia);border-radius:99px}
+.rcard{flex:0 0 300px;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px;display:flex;flex-direction:column}
+.ba{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.ba .cell{border-radius:12px;padding:12px 10px;font-size:12px;line-height:1.45}
+.ba .before{background:var(--beige);border:1px solid var(--line)}
+.ba .after{background:var(--rose-light);border:1px solid var(--line)}
+.ba .lbl{font-size:9.5px;font-weight:700;letter-spacing:.1em;color:var(--muted);display:block;margin-bottom:5px}
+.ba .after .lbl{color:var(--fuchsia)}
+.rcard q{font-size:14px;line-height:1.55;margin-bottom:14px;flex:1}
+.r-meta{display:flex;gap:10px;align-items:center}
+.r-meta .sctag{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--fuchsia);background:var(--rose-light);padding:5px 12px;border-radius:999px}
+
+/* ── SYSTEM ── */
+.system{padding:70px 0}
+.system h2{font-size:clamp(1.8rem,4vw,2.5rem);text-align:center;margin-bottom:10px;color:var(--ink)}
+.system .lead{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 38px;font-size:15px}
+.sys-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.sys-grid{grid-template-columns:repeat(2,1fr)}}
+.scard{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:16px;cursor:pointer;text-align:center;transition:border-color .15s,transform .15s}
+.scard:hover{transform:translateY(-3px)}
+.scard.on{border-color:var(--fuchsia);box-shadow:0 0 0 3px rgba(194,69,107,.15)}
+.scard .sicon{aspect-ratio:1/1;border-radius:14px;margin-bottom:12px;background:var(--rose-light);display:flex;align-items:center;justify-content:center;font-size:34px}
+.scard h3{font-size:16px;margin-bottom:4px;color:var(--ink)}
+.scard small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--fuchsia);margin-bottom:4px}
+.scard p{font-size:12.5px;color:var(--muted)}
+.sys-detail{margin-top:22px;background:var(--rose-light);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;display:none}
+.sys-detail.show{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.sys-detail h3{font-size:21px;margin-bottom:10px;color:var(--ink)}
+.sys-detail p{font-size:14.5px;line-height:1.7;color:#6e4554;max-width:760px}
+
+/* ── PERKS ── */
+.perks{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px 0}
+.perks .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+@media(max-width:760px){.perks .wrap{grid-template-columns:1fr;gap:18px}}
+.perk h3{font-size:16px;margin-bottom:4px;color:var(--ink)}
+.perk p{font-size:13px;color:var(--muted)}
+
+/* ── FOOTER ── */
+footer{background:#2A1A1E;color:#CBA6B1;padding:50px 0 28px;font-size:13.5px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:34px}
+@media(max-width:760px){.f-grid{grid-template-columns:1fr 1fr}}
+.f-grid h4{color:#fff;font-size:12px;letter-spacing:.12em;margin-bottom:14px}
+.f-grid ul{list-style:none}
+.f-grid li{margin-bottom:9px}
+.f-grid a{text-decoration:none;opacity:.85}
+.f-grid a:hover{opacity:1;color:#FFC0D0}
+.f-logo{font-size:24px;font-weight:800;color:#fff;margin-bottom:10px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;font-size:12px;opacity:.7;flex-wrap:wrap;gap:8px}
+
+/* ── STICKY BAR ── */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:95;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+.sticky-bar.show{transform:none}
+.sb-in{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;gap:10px;align-items:center}
+.sb-offers{display:flex;gap:10px;flex:1}
+.sb-offer{flex:1;display:flex;gap:10px;align-items:center;background:var(--beige);border:1.5px solid var(--line);border-radius:12px;padding:8px 10px;cursor:pointer;text-decoration:none}
+.sb-offer.hot{border-color:var(--fuchsia)}
+.sb-offer .media{width:40px;height:40px;border-radius:8px;flex:none}
+.sb-offer b{font-size:12.5px;display:block;color:var(--ink)}
+.sb-offer small{font-size:11px;color:var(--muted)}
+.sb-cta{padding:13px 24px;font-size:14px}
+
+/* ── MOBILE RESPONSIVE CORRECTIONS ── */
+@media (max-width: 768px) {
+  /* 1. Supprimer tout overflow horizontal */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .wrap,
+  .pdp,
+  main,
+  section,
+  div {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .wrap,
+  .pdp,
+  main {
+    width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  /* 2. Le header mobile simple */
+  nav {
+    height: 64px !important;
+    padding: 0 16px !important;
+  }
+  .nav-in {
+    height: 100% !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  nav .btn-sm {
+    padding: 8px 16px !important;
+    font-size: 13.5px !important;
+  }
+
+  /* 3. La barre promo lisible */
+  .annbar {
+    text-align: center !important;
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+  }
+
+  /* 4. La galerie produit mobile */
+  .gallery {
+    width: 100% !important;
+    margin-top: 16px !important;
+    position: static !important;
+    padding: 0 !important;
+  }
+  .g-main {
+    width: 100% !important;
+    max-height: 520px !important;
+    aspect-ratio: 4 / 5 !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    background: #f3e4df !important;
+    display: block !important;
+  }
+  #gmain {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 520px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    border-radius: 24px !important;
+  }
+  .g-thumbs {
+    margin-top: 12px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  .g-thumbs .media {
+    width: 64px !important;
+    height: 64px !important;
+    flex: 0 0 64px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 1.5px solid var(--line) !important;
+  }
+  .g-thumbs .media.on {
+    border: 2px solid var(--fuchsia) !important;
+  }
+  .g-thumbs .media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* 5. Corriger spécialement l'image hero mobile style capsule */
+  .sticky-bar,
+  .cw-mobile-bar {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    width: auto !important;
+    max-width: calc(100% - 24px) !important;
+    border-radius: 18px !important;
+    border: 1px solid var(--line) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  }
+
+  /* 6. Les sections desktop doivent devenir une seule colonne */
+  .pdp {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 16px 0 !important;
+  }
+  .ps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .app-row {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .cw-container {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .sys-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .perks .wrap {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .f-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .steps {
+    gap: 16px !important;
+  }
+  .step {
+    grid-template-columns: 46px 1fr !important;
+    gap: 16px !important;
+    padding: 18px !important;
+  }
+  .step .step-img {
+    display: none !important;
+  }
+
+  /* Alignments and spacing text centering for sections */
+  .prob h2, .prob .lead, .how h2, .how .lead, .app h2, .app .lead, .colors h2, .colors .lead {
+    text-align: center !important;
+  }
+  .app-tx {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .app-feats {
+    text-align: left !important;
+  }
+  .sole-card {
+    text-align: left !important;
+    margin-top: 16px !important;
+    padding: 16px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+  .sole-card-left {
+    width: 48px !important;
+    flex-shrink: 0 !important;
+  }
+  .cutaway-container {
+    width: 100% !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    margin-top: 16px !important;
+  }
+  .cutaway-img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Color Configurator mobile details */
+  .cw-hero {
+    width: 100% !important;
+    max-height: 380px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+  .cw-hero-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .cw-config {
+    width: 100% !important;
+  }
+  .cw-feat-list {
+    text-align: left !important;
+  }
+
+  /* Variant selectors as clean full-width horizontal rows */
+  .variants {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .vcard {
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 16px !important;
+    padding: 12px 16px !important;
+    border-radius: 16px !important;
+    position: relative !important;
+  }
+  .vcard .media {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 0 !important;
+    border-radius: 10px !important;
+    flex-shrink: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important;
+  }
+  .vcard .media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .vcard b {
+    font-size: 14.5px !important;
+    margin-bottom: 2px !important;
+    display: block !important;
+  }
+  .vcard small {
+    font-size: 12.5px !important;
+    color: var(--muted) !important;
+  }
+  .vcard .tag {
+    top: -8px !important;
+    right: 12px !important;
+    left: auto !important;
+    transform: none !important;
+    font-size: 9px !important;
+    padding: 3px 8px !important;
+  }
+  /* laisser la place au badge dans le coin, éviter le chevauchement du prix */
+  .vcard.on { padding-top: 16px !important; }
+
+  /* UGC list */
+  .ugc-track {
+    gap: 10px !important;
+    padding: 4px 0 10px !important;
+  }
+  .ugc-card {
+    flex: 0 0 120px !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+  .ugc-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* System list cards styled as rows */
+  .scard {
+    padding: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 16px !important;
+    border-radius: 16px !important;
+  }
+  .scard .sicon {
+    width: 48px !important;
+    height: 48px !important;
+    margin-bottom: 0 !important;
+    font-size: 24px !important;
+    flex-shrink: 0 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .scard h3 {
+    font-size: 15px !important;
+    margin-bottom: 2px !important;
+  }
+  .scard p {
+    font-size: 13px !important;
+  }
+
+  /* 7. Les cards produits du bottom bar doivent devenir scroll horizontal sur mobile */
+  .sb-offers {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    flex: 1 !important;
+    min-width: 0 !important; /* Prevents overflow and overlap with the CTA button */
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important; /* Hide scrollbar Firefox */
+    padding: 4px 0 !important;
+  }
+  .sb-offers::-webkit-scrollbar {
+    display: none !important; /* Hide scrollbar Chrome/Safari */
+  }
+  .sb-offer {
+    display: flex !important;
+    min-width: 160px !important;
+    flex: 0 0 160px !important;
+    padding: 6px 8px !important;
+    border-radius: 10px !important;
+    gap: 8px !important;
+  }
+  .sb-offer .media {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+  }
+  .sb-offer .media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .sb-offer b {
+    font-size: 11.5px !important;
+    line-height: 1.2 !important;
+  }
+  .sb-offer small {
+    font-size: 10px !important;
+  }
+  .sb-in {
+    padding: 8px !important;
+    gap: 8px !important;
+  }
+  .sb-cta {
+    padding: 10px 14px !important;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
+    border-radius: 999px !important;
+  }
+
+  /* 8. Le bouton Commander ne doit jamais cacher le contenu */
+  body {
+    padding-bottom: 120px !important;
+  }
+}
+
+/* ── FIX overflow mobile : forcer les colonnes à rétrécir sous la largeur intrinsèque des images ── */
+@media (max-width: 768px) {
+  .pdp {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 16px !important;
+  }
+  .pdp > *,
+  .gallery,
+  .buy,
+  .app-row > *,
+  .cw-container > *,
+  .step,
+  .ps,
+  .rcard {
+    min-width: 0 !important;
+  }
+  .buy h1 {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  /* tout média reste dans sa boîte */
+  .g-main, .gallery, .buy, .variants, .vcard {
+    max-width: 100% !important;
+  }
+
+  /* Barre du bas : Commander pleine largeur, propre, sans chevauchement */
+  .sb-offers { display: none !important; }
+  .sb-in {
+    padding: 10px 14px !important;
+    gap: 0 !important;
+  }
+  .sb-cta {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    padding: 15px !important;
+    font-size: 15.5px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    border-radius: 999px !important;
+  }
+
+  /* Bouton WhatsApp : libellé et prix bien groupés, jamais coupés */
+  .cta-main {
+    flex-wrap: wrap !important;
+    gap: 4px 8px !important;
+    font-size: 15px !important;
+    padding: 15px !important;
+    line-height: 1.25 !important;
+  }
+}
+/* ════════════════════════════════════════════════
+   ESSAI — THÈME CLAY / PASTEL (accents 3D soft)
+   Pour revenir au design classique : restaurer index_classic_backup.html
+   ════════════════════════════════════════════════ */
+:root{
+  --beige:#FCE9EC; --beige2:#FBDBE4; --surface:#FFFFFF; --line:#F4D6DE;
+}
+body{background:#FCE9EC}
+
+/* Logo pastel multicolore (comme la réf "Search.") */
+.logo{font-weight:800;letter-spacing:.5px}
+.logo .l1{color:#6FC0D4}
+.logo .l2{color:#F2C94C}
+.logo .l3{color:#E48AA6}
+.logo .l4{color:#7FC8A0}
+.logo .l5{color:#E8826E}
+.logo i{background:#E8826E !important;box-shadow:none !important}
+
+/* Boutons "gonflés" — on GARDE le dégradé fuchsia pour le contraste/affordance */
+.btn-cta{
+  border-radius:999px;
+  box-shadow:
+    0 9px 0 -2px rgba(155,47,78,.45),
+    0 16px 26px rgba(194,69,107,.30),
+    inset 0 3px 5px rgba(255,255,255,.55),
+    inset 0 -5px 9px rgba(155,47,78,.40) !important;
+}
+.btn-cta:hover{transform:translateY(-1px)}
+.btn-cta:active{
+  transform:translateY(4px);
+  box-shadow:
+    0 4px 0 -2px rgba(155,47,78,.45),
+    0 8px 14px rgba(194,69,107,.30),
+    inset 0 2px 4px rgba(255,255,255,.5),
+    inset 0 -3px 6px rgba(155,47,78,.35) !important;
+}
+
+/* Cartes "clay" : très arrondies + ombre douce en relief */
+.vcard,.scard,.ps,.rcard,.sole-card,.guarantee,.app-choice,
+.how-note,.cw-card,.cutaway-container,.cw-hero{
+  border-radius:28px !important;
+  border:none !important;
+  box-shadow:
+    9px 9px 22px rgba(214,150,170,.40),
+    -8px -8px 18px rgba(255,255,255,.90) !important;
+}
+.vcard.on{box-shadow:0 0 0 3px var(--fuchsia), 9px 9px 22px rgba(214,150,170,.40) !important}
+
+/* Cadres image plus arrondis */
+.g-main,.gallery .media,.app-shot,.colors .media,.ugc-card{border-radius:26px !important}
+
+/* Champs / accordéons adoucis */
+.acc summary::after{color:#E8826E}
+.annbar{box-shadow:inset 0 -3px 6px rgba(155,47,78,.25)}
+
+/* Bandeau "perks" (-30% / paiement / garantie) en rose, sans bande blanche */
+.perks{background:transparent !important;border-top:none !important;border-bottom:none !important}
+
+/* Section "Le Système" : lignes compactes (emoji + texte) au lieu de grands carrés vides */
+@media(min-width:769px){ .sys-grid{grid-template-columns:1fr 1fr !important;gap:14px !important} }
+.scard{display:flex !important;align-items:center;gap:16px;text-align:left !important;padding:16px 18px !important}
+.scard .sicon{width:54px !important;height:54px !important;aspect-ratio:auto !important;margin-bottom:0 !important;
+  flex:none;font-size:26px !important;border-radius:16px !important}
+.scard-tx{flex:1;min-width:0}
+.scard-tx small{display:block;margin-bottom:1px}
+.scard-tx h3{font-size:16px;margin-bottom:2px}
+.scard-tx p{font-size:13px}
+
+/* Retirer le cadre blanc derrière le bouton Commander (barre du bas, mobile) */
+@media(max-width:768px){
+  .sticky-bar{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+  .sticky-bar .sb-in{padding:8px 14px !important}
+}
+
+/* ===== Panier + Popup + Carrousel ===== */
+.nav-right{display:flex;align-items:center;gap:12px}
+.cart-btn{position:relative;width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:19px;cursor:pointer;
+  box-shadow:3px 3px 10px rgba(214,150,170,.35),-3px -3px 8px rgba(255,255,255,.9);transition:transform .15s}
+.cart-btn:hover{transform:translateY(-1px)}
+.cart-count{position:absolute;top:-3px;right:-3px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--grad);
+  color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
+
+.g-main{cursor:pointer}
+.gal-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);color:var(--fuchsia);
+  font-size:12px;font-weight:700;padding:7px 15px;border-radius:999px;pointer-events:none;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+
+/* overlay commun */
+.ov{position:fixed;inset:0;background:rgba(50,30,40,.45);backdrop-filter:blur(3px);z-index:200;display:none;align-items:center;justify-content:center;padding:18px}
+.ov.show{display:flex}
+
+/* Modal produit */
+.modal-box{background:#fff;border-radius:28px;max-width:880px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;
+  box-shadow:0 30px 70px rgba(80,40,55,.35)}
+@media(max-width:720px){.modal-box{grid-template-columns:1fr;max-height:94vh}}
+.modal-box .m-img{aspect-ratio:4/3;background:var(--pink2)}
+.modal-box .m-img img{width:100%;height:100%;object-fit:cover}
+.modal-box .m-info{padding:28px}
+.modal-box .m-info h3{font-size:22px;font-weight:800;color:var(--ink);margin-bottom:10px}
+.m-price{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.m-price .now{font-size:1.7rem;font-weight:800;color:var(--fuchsia)}
+.m-price .old{text-decoration:line-through;color:var(--muted);opacity:.7}
+.m-ship{color:var(--ok);font-weight:600;font-size:13.5px;margin-bottom:16px}
+.m-feats{list-style:none;margin-bottom:20px}
+.m-feats li{font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);display:flex;gap:10px}
+.m-feats li::before{content:"✓";color:var(--fuchsia);font-weight:800}
+.m-btns{display:flex;flex-direction:column;gap:10px}
+.btn-soft{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;border-radius:999px;font-size:15px;font-weight:700;cursor:pointer;border:none;text-decoration:none}
+.btn-add{background:#fff;color:var(--fuchsia);border:2px solid var(--fuchsia)}
+.btn-add:active{transform:scale(.98)}
+.btn-wa{color:#fff;background:var(--grad);box-shadow:0 8px 18px rgba(194,69,107,.3)}
+.modal-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:999px;border:none;background:rgba(255,255,255,.9);font-size:22px;cursor:pointer;z-index:2;line-height:1}
+
+/* Tiroir panier */
+.cart-panel{background:#fff;color:var(--ink);width:100%;max-width:440px;height:100%;max-height:100vh;margin-left:auto;border-radius:28px 0 0 28px;padding:24px;overflow:auto;display:flex;flex-direction:column;box-shadow:-24px 0 60px rgba(80,40,55,.28)}
+.cart-panel h3,.cart-total{color:var(--ink)}
+.ci{background:#FDF3F6}
+.cart-overlay{align-items:stretch;justify-content:flex-end;padding:0}
+.cart-panel h3{font-size:20px;font-weight:800;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
+.cart-items{flex:1;display:flex;flex-direction:column;gap:12px}
+.cart-empty{color:var(--muted);text-align:center;padding:40px 0}
+.ci{display:flex;gap:12px;align-items:center;background:#fff;border-radius:18px;padding:10px;box-shadow:3px 3px 10px rgba(214,150,170,.25)}
+.ci img{width:60px;height:60px;border-radius:12px;object-fit:cover;flex:none}
+.ci b{display:block;font-size:14px}
+.ci small{color:var(--muted);font-size:12.5px}
+.ci .ci-price{color:var(--fuchsia);font-weight:700;font-size:13.5px}
+.ci-del{margin-left:auto;background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;align-self:flex-start}
+.cart-foot{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}
+.cart-total{display:flex;justify-content:space-between;font-size:17px;font-weight:800;margin-bottom:14px}
+
+/* ===== Cartes produit : réactives (survol) mais non cliquables ===== */
+.vcard{cursor:default;transition:transform .25s ease, box-shadow .25s ease}
+.vcard:hover{transform:translateY(-6px)}
+.vcard:hover .media img{transform:scale(1.04)}
+.vcard .media{overflow:hidden}
+.vcard .media img{transition:transform .4s ease}
+
+/* ===== Animations légères ===== */
+/* micro-interactions */
+.scard,.ps,.rcard,.perk,.ugc-card,.sw,.cart-btn{transition:transform .25s ease, box-shadow .25s ease}
+.scard:hover{transform:translateY(-4px)}
+.ugc-card:hover{transform:translateY(-4px) scale(1.01)}
+.btn-cta,.btn-sm{transition:transform .18s ease, box-shadow .18s ease, filter .18s ease}
+.btn-cta:hover,.btn-sm:hover{filter:brightness(1.03)}
+.g-thumbs .media{transition:transform .2s ease}
+.g-thumbs .media:hover{transform:translateY(-3px)}
+.gal-hint{animation:hintPulse 2.4s ease-in-out infinite}
+@keyframes hintPulse{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-4px)}}
+
+/* apparition au défilement */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none}
+  .gal-hint{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="annbar">🇲🇦 Offre Lancement : <b>-30%</b> · Paiement à la livraison · Code promo <b>GYMIE30</b></div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo"><span class="l1">g</span><span class="l2">y</span><span class="l3">m</span><span class="l4">i</span><span class="l5">e</span><i></i></div>
+    <ul class="nav-links">
+      <li><a href="#compartiments">Les poches</a></li>
+      <li><a href="#couleurs">Couleurs</a></li>
+      <li><a href="#systeme">Le Système</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <button id="cartBtn" class="cart-btn" aria-label="Voir mon panier">🛒<span id="cartCount" class="cart-count" hidden>0</span></button>
+      <a href="https://wa.me/212698040572?text=Salam%20!%20Je%20veux%20commander%20le%20Pack%20Duo%20Gymie" class="btn btn-cta btn-sm">Commander</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════ PDP ════ -->
+<main class="wrap pdp" id="top">
+
+  <!-- GALLERY : carrousel auto des couleurs -->
+  <div class="gallery">
+    <div class="media g-main" id="galMain">
+      <img id="gmain" class="imgfill" src="assets/colors_clean/rose.webp" alt="Le Sac Gymie - Rose poudré">
+      <span class="gal-hint">👆 Voir le détail</span>
+    </div>
+    <div class="g-thumbs" id="galThumbs">
+      <div class="media on" data-full="assets/colors_clean/rose.webp" data-color="Rose poudré"><img class="imgfill" src="assets/colors_clean/rose.webp" alt="Sac Gymie rose"></div>
+      <div class="media" data-full="assets/colors_clean/bleu.webp" data-color="Bleu ciel"><img class="imgfill" src="assets/colors_clean/bleu.webp" alt="Sac Gymie bleu"></div>
+      <div class="media" data-full="assets/colors_clean/noir.webp" data-color="Noir"><img class="imgfill" src="assets/colors_clean/noir.webp" alt="Sac Gymie noir"></div>
+      <div class="media" data-full="assets/colors_clean/beige.webp" data-color="Beige sable"><img class="imgfill" src="assets/colors_clean/beige.webp" alt="Sac Gymie beige"></div>
+      <div class="media" data-full="assets/colors_clean/jaune.webp" data-color="Jaune pastel"><img class="imgfill" src="assets/colors_clean/jaune.webp" alt="Sac Gymie jaune"></div>
+    </div>
+  </div>
+
+  <!-- BUY BOX -->
+  <div class="buy">
+    <span class="badge-sale">OFFRE DE LANCEMENT</span>
+
+    <h1>Le sac de sport qui sépare le propre du sale.</h1>
+    <p class="sub">GYMIE est un sac de sport simple et pratique : un compartiment chaussures ventilé, une poche séparée pour le linge humide, et une serviette de banc assortie. Pour arriver et repartir de la salle bien organisée.</p>
+
+    <ul class="checks">
+      <li>Compartiment chaussures ventilé, séparé du reste</li>
+      <li>Poche dédiée pour la tenue humide après l'effort</li>
+      <li>Serviette de banc qui s'étale sur les machines</li>
+      <li>Format compact, idéal pour les casiers de salle</li>
+    </ul>
+
+    <div class="swatches">
+      <span class="lbl">Couleur :</span>
+      <span class="sw" style="background:#E89CAE" title="Rose"></span>
+      <span class="sw" style="background:#A9C4DE" title="Bleu"></span>
+      <span class="sw" style="background:#2C2C2C" title="Noir"></span>
+      <span class="sw" style="background:#E4D5C3" title="Beige"></span>
+      <span class="sw" style="background:#EBD98C" title="Jaune"></span>
+    </div>
+
+    <div class="variants">
+      <div class="vcard" data-page="sac.html">
+        <div class="media"><img class="imgfill" src="assets/webp/lifestyle.webp" alt="Le sac GYMIE seul"></div>
+        <b>Le Sac Gymie</b><small><s>499 DH</s> <span class="now">349 DH</span><br><span class="ship">Livraison incluse</span></small>
+      </div>
+      <div class="vcard on" data-page="pack.html">
+        <span class="tag">LE PLUS CHOISI</span>
+        <div class="media"><img class="imgfill" src="assets/pack_duo_yellow.png" alt="Le Pack Duo GYMIE : sac jaune et serviette assortie"></div>
+        <b>Le Pack Duo</b><small><s>648 DH</s> <span class="now">399 DH</span><br>Sac + Serviette · <span class="ship">Livraison incluse</span></small>
+      </div>
+      <div class="vcard" data-page="serviette.html">
+        <div class="media"><img class="imgfill" src="assets/webp/gymie_towel_3d.webp" alt="La serviette de banc GYMIE"></div>
+        <b>La Serviette</b><small><s>149 DH</s> <span class="now">79 DH</span><br><span class="ship">Livraison incluse</span></small>
+      </div>
+    </div>
+
+    <a class="btn btn-cta cta-main" id="ctaBtn" href="https://wa.me/212698040572?text=Salam%20!%20Je%20veux%20commander%20le%20Pack%20Duo%20Gymie%20%E2%80%94%20399%20DH">
+      <span class="cta-label">Commander sur WhatsApp</span>
+      <span class="cta-price"><span id="price">399 DH</span> <s id="oldprice">648 DH</s></span>
+    </a>
+    <div class="cod-note"><span>💵 Paiement à la livraison</span><span>🚚 Livraison incluse · 24–48h</span><span>🔒 Garantie 7 jours</span></div>
+
+    <div class="ugc">
+      <div class="ugc-head"><span>Elles portent Gymie</span><small>Photos en situation</small></div>
+      <div class="ugc-track">
+        <div class="ugc-card"><img class="imgfill" src="assets/webp/review_1.webp" alt="Cliente avec le sac Gymie à la salle" loading="lazy"></div>
+        <div class="ugc-card"><img class="imgfill" src="assets/webp/review_4.webp" alt="Cliente avec le sac Gymie bleu" loading="lazy"></div>
+        <div class="ugc-card"><img class="imgfill" src="assets/webp/review_3.webp" alt="Cliente avec le sac Gymie au vestiaire" loading="lazy"></div>
+        <div class="ugc-card"><img class="imgfill" src="assets/webp/review_5.webp" alt="Cliente avec le sac Gymie rose" loading="lazy"></div>
+        <div class="ugc-card"><img class="imgfill" src="assets/webp/review_2.webp" alt="Cliente portant le sac Gymie" loading="lazy"></div>
+        <div class="ugc-card"><img class="imgfill" src="assets/webp/review_6.webp" alt="Cliente avec le sac Gymie à l'épaule" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="guarantee">
+      <div class="gic">✓</div>
+      <div><b>Garantie 7 jours Satisfaite ou Remboursée.</b> Si le sac ne change pas votre organisation à la salle, on récupère le colis gratuitement chez vous et on vous rembourse en espèces.</div>
+    </div>
+
+    <details class="acc" open>
+      <summary>BÉNÉFICES CLÉS</summary>
+      <div class="acc-body"><div class="blist">
+        <div class="bi">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div><b>Compartiment chaussures ventilé</b><span>Une poche latérale aérée qui isole vos baskets du reste de vos affaires.</span></div>
+        </div>
+        <div class="bi">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 7l1.5 12a2 2 0 0 0 2 1.8h11a2 2 0 0 0 2-1.8L21 7M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <div><b>Poche linge humide</b><span>Un espace séparé pour ranger la tenue mouillée sans toucher le propre.</span></div>
+        </div>
+        <div class="bi">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h16v4a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M4 7c0-1.5 3.6-2.5 8-2.5S20 5.5 20 7"/></svg></div>
+          <div><b>Serviette de banc assortie</b><span>Une serviette qui s'étale sur les machines et les bancs de musculation.</span></div>
+        </div>
+      </div></div>
+    </details>
+    <details class="acc">
+      <summary>COMMENT L'ORGANISER</summary>
+      <div class="acc-body">Glissez vos baskets dans le compartiment latéral ventilé. Vos vêtements propres se rangent au centre. Après l'entraînement, mettez votre tenue transpirée ou votre maillot mouillé dans la poche séparée. Le propre et le sale ne se touchent pas.</div>
+    </details>
+    <details class="acc">
+      <summary>COMPOSITION & MATIÈRES</summary>
+      <div class="acc-body">Le sac GYMIE est en nylon résistant et léger, facile à nettoyer, avec des fermetures éclair renforcées. La serviette est en microfibre absorbante avec un dos imperméable qui isole du banc.</div>
+    </details>
+  </div><!-- /.buy -->
+  </main>
+
+  <!-- ════ PROBLEM ════ -->
+  <section class="prob">
+    <div class="wrap">
+      <span class="eyebrow">LE CONSTAT EN SALLE</span>
+      <h2>Fini le sac où tout se mélange.</h2>
+      <p class="lead">Les sacs de sport ordinaires mettent les baskets, le linge humide et le propre au même endroit. GYMIE sépare chaque chose.</p>
+
+      <div class="ps-grid">
+        <div class="ps">
+          <div class="pp"><span class="em">😟</span><div class="tx"><b>Chaussures au contact du propre</b><p>Mettre ses baskets à côté de sa serviette ou de ses rechanges propres est peu hygiénique et favorise les odeurs.</p></div></div>
+          <div class="arrow">↓</div>
+          <div class="sol"><span class="em">👟</span><div class="tx"><b>Une poche ventilée dédiée</b><p>Un compartiment latéral fermé et aéré qui isole vos chaussures.</p></div></div>
+        </div>
+
+        <div class="ps">
+          <div class="pp"><span class="em">💧</span><div class="tx"><b>Le linge humide mouille tout</b><p>Un t-shirt trempé ou un maillot humide mouille le reste des vêtements propres dans le sac.</p></div></div>
+          <div class="arrow">↓</div>
+          <div class="sol"><span class="em">🧺</span><div class="tx"><b>Poche linge humide séparée</b><p>Un espace à part pour la tenue mouillée, qui protège le reste de vos affaires.</p></div></div>
+        </div>
+
+        <div class="ps">
+          <div class="pp"><span class="em">🪑</span><div class="tx"><b>Les bancs de muscu pleins de sueur</b><p>De nombreuses personnes transpirent sur le cuir des bancs. S'allonger dessus directement n'est pas agréable.</p></div></div>
+          <div class="arrow">↓</div>
+          <div class="sol"><span class="em">🛡️</span><div class="tx"><b>Une serviette à dos imperméable</b><p>Elle s'étale sur le banc et fait barrière entre votre peau et la machine.</p></div></div>
+        </div>
+
+        <div class="ps">
+          <div class="pp"><span class="em">👜</span><div class="tx"><b>Des sacs trop grands ou austères</b><p>Encombrants ou peu pratiques à porter au quotidien, de la salle au travail.</p></div></div>
+          <div class="arrow">↓</div>
+          <div class="sol"><span class="em">✨</span><div class="tx"><b>Un format compact et simple</b><p>Une forme nette, plusieurs couleurs, facile à porter et à ranger dans un casier.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ════ FEATURE ROWS ════ -->
+  <section class="app" id="compartiments">
+    <div class="wrap">
+      <span class="eyebrow">LES POCHES EN DÉTAIL</span>
+      <h2>Chaque chose à sa place.</h2>
+      <p class="lead">Le sac GYMIE est conçu autour de compartiments séparés, pour une organisation simple et nette.</p>
+
+      <div class="app-row">
+        <!-- Left Column: Details and bacteria card -->
+        <div class="app-tx">
+          <span class="who">COMPARTIMENT CHAUSSURES</span>
+          <h3>Une poche ventilée pour les baskets.</h3>
+          <p>Un compartiment latéral à part, aéré, qui accueille vos chaussures de sport sans les mettre au contact du reste.</p>
+          <ul class="app-feats">
+            <li>Aération par une grille qui laisse respirer</li>
+            <li>Séparé du compartiment principal</li>
+            <li>Accès rapide par une fermeture latérale</li>
+          </ul>
+          
+          <!-- White rounded sole card -->
+          <div class="sole-card">
+            <div class="sole-card-left">
+              <img src="assets/webp/semelle.webp" alt="Semelle de basket marquée de bactéries">
+            </div>
+            <div class="sole-card-right">
+              <h4>Les semelles de vos baskets peuvent contenir des bactéries.</h4>
+              <p>C’est pourquoi elles doivent rester dans un compartiment séparé et ventilé.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Cross-sectional cutaway image container -->
+        <div class="cutaway-container">
+          <img class="cutaway-img" src="assets/cutaway/bag_cutaway.png" alt="Vue en coupe du sac Gymie isolant les chaussures des vêtements propres">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ COLORWAYS ════ -->
+  <section class="colors" id="couleurs">
+    <span class="eyebrow">PLUSIEURS COULEURS</span>
+    <h2>Choisissez le vôtre.</h2>
+    <p class="lead">Le même sac. Votre couleur.</p>
+    
+    <div class="cw-container">
+      <!-- Left Side: Hero Image Configurator -->
+      <div class="cw-hero">
+        <img class="cw-hero-img active" data-color="rose_poudre" src="assets/colors/rose_poudre_11.png" alt="Le Pack Duo GYMIE - Rose Poudré">
+        <img class="cw-hero-img" data-color="bleu_ciel" src="assets/colors/bleu_ciel_11.png" alt="Le Pack Duo GYMIE - Bleu Ciel">
+        <img class="cw-hero-img" data-color="noir" src="assets/colors/noir_11.png" alt="Le Pack Duo GYMIE - Noir">
+        <img class="cw-hero-img" data-color="beige_sable" src="assets/colors/beige_sable_11.png" alt="Le Pack Duo GYMIE - Beige Sable">
+        <img class="cw-hero-img" data-color="jaune_pastel" src="assets/colors/jaune_pastel_11.png" alt="Le Pack Duo GYMIE - Jaune Pastel">
+      </div>
+      
+      <!-- Right Side: Color config options -->
+      <div class="cw-config">
+        <div class="cw-options">
+          <!-- Rose poudré -->
+          <div class="cw-card selected" data-color="rose_poudre" data-name="Rose poudré">
+            <div class="cw-swatch-container">
+              <span class="cw-swatch" style="background:#E89CAE"></span>
+              <div class="cw-preview"><img src="assets/colors/rose_poudre_11.png" alt="Rose poudré preview"></div>
+            </div>
+            <div class="cw-info">
+              <span class="cw-name">Rose poudré</span>
+              <span class="cw-badge">Le plus choisi</span>
+            </div>
+            <div class="cw-status">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Sélectionné</span>
+            </div>
+          </div>
+          
+          <!-- Bleu ciel -->
+          <div class="cw-card" data-color="bleu_ciel" data-name="Bleu ciel">
+            <div class="cw-swatch-container">
+              <span class="cw-swatch" style="background:#A9C4DE"></span>
+              <div class="cw-preview"><img src="assets/colors/bleu_ciel_11.png" alt="Bleu ciel preview"></div>
+            </div>
+            <div class="cw-info">
+              <span class="cw-name">Bleu ciel</span>
+              <span class="cw-badge">Édition été</span>
+            </div>
+            <div class="cw-status">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Sélectionné</span>
+            </div>
+          </div>
+          
+          <!-- Noir -->
+          <div class="cw-card" data-color="noir" data-name="Noir">
+            <div class="cw-swatch-container">
+              <span class="cw-swatch" style="background:#2C2C2C"></span>
+              <div class="cw-preview"><img src="assets/colors/noir_11.png" alt="Noir preview"></div>
+            </div>
+            <div class="cw-info">
+              <span class="cw-name">Noir</span>
+              <span class="cw-badge">Intemporel</span>
+            </div>
+            <div class="cw-status">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Sélectionné</span>
+            </div>
+          </div>
+          
+          <!-- Beige sable -->
+          <div class="cw-card" data-color="beige_sable" data-name="Beige sable">
+            <div class="cw-swatch-container">
+              <span class="cw-swatch" style="background:#E4D5C3"></span>
+              <div class="cw-preview"><img src="assets/colors/beige_sable_11.png" alt="Beige sable preview"></div>
+            </div>
+            <div class="cw-info">
+              <span class="cw-name">Beige sable</span>
+              <span class="cw-badge">Minimal</span>
+            </div>
+            <div class="cw-status">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Sélectionné</span>
+            </div>
+          </div>
+          
+          <!-- Jaune pastel -->
+          <div class="cw-card" data-color="jaune_pastel" data-name="Jaune pastel">
+            <div class="cw-swatch-container">
+              <span class="cw-swatch" style="background:#EBD98C"></span>
+              <div class="cw-preview"><img src="assets/colors/jaune_pastel_11.png" alt="Jaune pastel preview"></div>
+            </div>
+            <div class="cw-info">
+              <span class="cw-name">Jaune pastel</span>
+              <span class="cw-badge">Énergique</span>
+            </div>
+            <div class="cw-status">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Sélectionné</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Features checklist -->
+        <div class="cw-features">
+          <ul class="cw-feat-list">
+            <li>Compartiment chaussures</li>
+            <li>Poche serviette</li>
+            <li>Poche makeup intégrée</li>
+            <li>Compartiment principal</li>
+            <li>Même organisation</li>
+          </ul>
+          <span class="cw-subtext">La couleur change. L'organisation reste.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Mobile Sticky Configurator Bar -->
+  <div class="cw-mobile-bar" id="cwMobileBar">
+    <div class="cw-mbar-in">
+      <div class="cw-mbar-details">
+        <span class="cw-mbar-title">Sac Gymie</span>
+        <span class="cw-mbar-price"><span>349 DH</span> · <span id="cwMbarColor">Rose poudré</span></span>
+      </div>
+      <a id="cwMbarCta" href="https://wa.me/212698040572?text=Salam%20!%20Je%20veux%20commander%20le%20Sac%20Gymie%20en%20couleur%20Rose%20poudr%C3%A9%20%E2%80%94%20349%20DH" class="btn btn-cta cw-mbar-btn">Commander</a>
+    </div>
+  </div>
+
+  <!-- ════ SCENARIOS ════ -->
+  <section class="results" id="temoignages">
+    <div class="wrap">
+      <h2>Les situations que GYMIE règle.</h2>
+      <p class="lead">Exemples d'usage au quotidien. (Les avis clients vérifiés seront ajoutés après les premières commandes.)</p>
+
+      <div class="r-track">
+        <div class="rcard">
+          <div class="ba">
+            <div class="cell before"><span class="lbl">SANS GYMIE</span>Baskets, linge humide et tenue propre mélangés dans un seul sac.</div>
+            <div class="cell after"><span class="lbl">AVEC GYMIE</span>Chaque chose dans son compartiment : chaussures, propre, humide.</div>
+          </div>
+          <q>Le compartiment chaussures évite que les tenues propres prennent l'odeur des baskets.</q>
+          <div class="r-meta"><span class="sctag">ORGANISATION</span></div>
+        </div>
+
+        <div class="rcard">
+          <div class="ba">
+            <div class="cell before"><span class="lbl">SANS GYMIE</span>S'allonger directement sur des bancs où la sueur s'accumule.</div>
+            <div class="cell after"><span class="lbl">AVEC GYMIE</span>La serviette à dos imperméable fait barrière avec le banc.</div>
+          </div>
+          <q>La serviette s'étale sur la machine et reste en place pendant la séance.</q>
+          <div class="r-meta"><span class="sctag">HYGIÈNE</span></div>
+        </div>
+
+        <div class="rcard">
+          <div class="ba">
+            <div class="cell before"><span class="lbl">SANS GYMIE</span>Un sac de sport trop grand, difficile à ranger dans un casier.</div>
+            <div class="cell after"><span class="lbl">AVEC GYMIE</span>Un format compact qui rentre dans les casiers standards.</div>
+          </div>
+          <q>Assez compact pour le casier, assez simple pour passer de la salle au quotidien.</q>
+          <div class="r-meta"><span class="sctag">PRATIQUE</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SYSTEM ════ -->
+  <section class="system wrap" id="systeme">
+    <span class="eyebrow">LE SYSTÈME GYMIE</span>
+    <h2>Ce qui fait le sac.</h2>
+    <p class="lead">Des choix simples et pratiques. Touchez une carte pour en savoir plus.</p>
+
+    <div class="sys-grid" id="sysGrid">
+      <div class="scard" data-detail="d1"><div class="sicon">👟</div><div class="scard-tx"><small>POCHE 1</small><h3>Compartiment chaussures</h3><p>Ventilé et séparé du reste du sac.</p></div></div>
+      <div class="scard" data-detail="d2"><div class="sicon">🧺</div><div class="scard-tx"><small>POCHE 2</small><h3>Poche linge humide</h3><p>La tenue mouillée à part, le propre protégé.</p></div></div>
+      <div class="scard" data-detail="d3"><div class="sicon">🛡️</div><div class="scard-tx"><small>SERVIETTE</small><h3>Dos imperméable</h3><p>Une barrière entre vous et le banc.</p></div></div>
+      <div class="scard" data-detail="d4"><div class="sicon">🧵</div><div class="scard-tx"><small>MATIÈRE</small><h3>Nylon résistant</h3><p>Léger, solide et facile à nettoyer.</p></div></div>
+      <div class="scard" data-detail="d5"><div class="sicon">🔗</div><div class="scard-tx"><small>FINITIONS</small><h3>Zips renforcés</h3><p>Fermetures éclair fluides et solides.</p></div></div>
+      <div class="scard" data-detail="d6"><div class="sicon">🎨</div><div class="scard-tx"><small>STYLE</small><h3>Plusieurs couleurs</h3><p>Rose, bleu, noir, beige, jaune.</p></div></div>
+      <div class="scard" data-detail="d7"><div class="sicon">📏</div><div class="scard-tx"><small>FORMAT</small><h3>Compact</h3><p>Pensé pour les casiers de salle.</p></div></div>
+      <div class="scard" data-detail="d8"><div class="sicon">🇲🇦</div><div class="scard-tx"><small>LIVRAISON</small><h3>Partout au Maroc</h3><p>Paiement à la livraison en espèces.</p></div></div>
+    </div>
+
+    <div class="sys-detail" id="d1"><h3>Compartiment chaussures — ventilé et séparé</h3><p>Une poche latérale fermée, aérée par une grille, qui accueille vos baskets sans les mettre au contact de vos vêtements propres ou de votre serviette.</p></div>
+    <div class="sys-detail" id="d2"><h3>Poche linge humide — le sale à part</h3><p>Un espace séparé pour ranger la tenue transpirée ou le maillot mouillé après la séance, afin que l'humidité ne se diffuse pas au reste du sac.</p></div>
+    <div class="sys-detail" id="d3"><h3>Serviette à dos imperméable</h3><p>La serviette de banc combine une face microfibre absorbante et un dos imperméable. Elle s'étale sur le banc ou la machine et fait barrière entre votre peau et la surface.</p></div>
+    <div class="sys-detail" id="d4"><h3>Nylon résistant et léger</h3><p>Le tissu extérieur est léger, solide et se nettoie facilement d'un coup de chiffon humide. Conçu pour un usage quotidien à la salle.</p></div>
+    <div class="sys-detail" id="d5"><h3>Zips renforcés</h3><p>Les fermetures à glissière sont renforcées et équipées de tirettes pratiques, pour une ouverture souple qui ne coince pas.</p></div>
+    <div class="sys-detail" id="d6"><h3>Plusieurs couleurs</h3><p>Le sac existe en rose, bleu, noir, beige et jaune. Vous choisissez la couleur, l'organisation reste la même.</p></div>
+    <div class="sys-detail" id="d7"><h3>Format compact</h3><p>Une taille pensée pour se glisser dans la plupart des casiers de vestiaire des salles de sport, sans être encombrant à porter.</p></div>
+    <div class="sys-detail" id="d8"><h3>Livraison partout au Maroc</h3><p>Livraison sous 24 à 48 h, paiement en espèces à la réception du colis. Retour gratuit sous 7 jours.</p></div>
+  </section>
+
+  <!-- ════ PERKS ════ -->
+  <section class="perks">
+    <div class="wrap">
+      <div class="perk"><h3>-30% de lancement</h3><p>Offre valable sur les premiers packs avec le code GYMIE30</p></div>
+      <div class="perk"><h3>Paiement à la livraison</h3><p>En espèces partout au Maroc à la réception de votre colis</p></div>
+      <div class="perk"><h3>Garantie 7 jours</h3><p>Satisfaite ou intégralement remboursée à votre porte</p></div>
+    </div>
+  </section>
+
+  <!-- ════ FAQ ════ -->
+  <section class="system wrap" id="faq" style="padding-top:52px">
+    <span class="eyebrow">QUESTIONS FRÉQUENTES</span>
+    <h2 style="text-align:center;margin-bottom:30px">Tout ce que vous devez savoir.</h2>
+    <div style="max-width:720px;margin:0 auto">
+      <details class="acc"><summary>QUELLES COULEURS SONT DISPONIBLES ?</summary><div class="acc-body">Le sac GYMIE existe en rose, bleu, noir, beige et jaune. Précisez votre couleur lors de la commande sur WhatsApp.</div></details>
+      <details class="acc"><summary>COMMENT LAVE-T-ON LA SERVIETTE ?</summary><div class="acc-body">La serviette se lave en machine à 30°C avec vos vêtements de sport et sèche rapidement.</div></details>
+      <details class="acc"><summary>EST-CE QUE LE SAC RENTRE DANS UN CASIER ?</summary><div class="acc-body">Oui. Son format compact se glisse dans la plupart des casiers de vestiaire standards des salles de sport.</div></details>
+      <details class="acc"><summary>LIVRAISON ET RETOURS ?</summary><div class="acc-body">Livraison dans tout le Maroc sous 24 à 48 heures, paiement en espèces à la livraison. Retour gratuit sous 7 jours si le produit ne vous convient pas.</div></details>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="wrap">
+      <div class="f-grid">
+        <div>
+          <div class="f-logo">gymie</div>
+          <p style="max-width:240px;line-height:1.6">Le sac de sport malin, pensé pour les sportives. Livré partout au Maroc. 🇲🇦</p>
+        </div>
+        <div><h4>BOUTIQUE</h4><ul><li><a href="#top">Le Sac — 349 DH</a></li><li><a href="#top">Le Pack Duo — 399 DH</a></li><li><a href="#top">La Serviette — 79 DH</a></li></ul></div>
+        <div><h4>À PROPOS</h4><ul><li><a href="#">Notre histoire</a></li><li><a href="#faq">FAQ</a></li><li><a href="#couleurs">Couleurs</a></li></ul></div>
+        <div><h4>AIDE</h4><ul><li><a href="https://wa.me/212698040572">WhatsApp Support</a></li><li><a href="#">Livraison</a></li><li><a href="#">Retours</a></li><li><a href="#">CGV</a></li></ul></div>
+      </div>
+      <div class="f-bottom"><span>© 2026 GYMIE. Tous droits réservés.</span><span>العربية | Français</span></div>
+    </div>
+  </footer>
+
+  <!-- ════ POPUP PRODUIT ════ -->
+  <div class="ov" id="modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+      <div class="m-img"><img id="modalImg" src="assets/colors_clean/rose.webp" alt="Sac Gymie"></div>
+      <div class="m-info">
+        <h3>Le Sac Gymie — <span id="modalColor">Rose poudré</span></h3>
+        <div class="m-price"><span class="now">349 DH</span><span class="old">499 DH</span></div>
+        <div class="m-ship">🚚 Livraison gratuite · 24–48h partout au Maroc</div>
+        <ul class="m-feats">
+          <li>Compartiment chaussures ventilé</li>
+          <li>Poche linge humide séparée</li>
+          <li>Compartiment principal spacieux</li>
+          <li>Nylon résistant · zips renforcés</li>
+        </ul>
+        <div class="m-btns">
+          <button class="btn-soft btn-add" id="modalAdd">🛒 Ajouter au panier</button>
+          <a class="btn-soft btn-wa" id="modalWa" href="#">Commander sur WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ PANIER ════ -->
+  <div class="ov cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <h3>Mon panier <button class="modal-close" id="cartClose" style="position:static" aria-label="Fermer">×</button></h3>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-foot">
+        <div class="cart-total">Total <span id="cartTotal">0 DH</span></div>
+        <a class="btn-soft btn-wa" id="cartCheckout" href="#">Commander tout sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ STICKY BAR ════ -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sb-in">
+      <div class="sb-offers">
+        <a class="sb-offer" href="#top"><div class="media"><img class="imgfill" src="assets/webp/lifestyle.webp" alt="Le sac GYMIE"></div><div><b>Le Sac Gymie</b><small>349 DH · livraison incluse</small></div></a>
+        <a class="sb-offer hot" href="#top"><div class="media"><img class="imgfill" src="assets/pack_duo_yellow.png" alt="Le Pack Duo GYMIE"></div><div><b>Le Pack Duo</b><small>399 DH · Le plus choisi</small></div></a>
+        <a class="sb-offer" href="#top"><div class="media"><img class="imgfill" src="assets/webp/gymie_towel_3d.webp" alt="La serviette GYMIE"></div><div><b>La Serviette</b><small>79 DH</small></div></a>
+      </div>
+      <a class="btn btn-cta sb-cta" href="https://wa.me/212698040572?text=Salam%20!%20Je%20veux%20commander%20le%20Pack%20Duo%20Gymie">Commander</a>
+    </div>
+  </div>
+
+  <script>
+  // gallery thumbs
+  document.querySelectorAll('.g-thumbs .media').forEach(t=>{
+    t.addEventListener('click',()=>{
+      document.querySelectorAll('.g-thumbs .media').forEach(x=>x.classList.remove('on'));
+      t.classList.add('on');
+      document.getElementById('gmain').src = t.dataset.full;
+    });
+  });
+  // Cartes produit : réactives au survol uniquement (non cliquables)
+  // system detail
+  document.querySelectorAll('.scard').forEach(c=>{
+    c.addEventListener('click',()=>{
+      const id=c.dataset.detail;
+      const target=document.getElementById(id);
+      const wasOpen=target.classList.contains('show');
+      document.querySelectorAll('.sys-detail').forEach(d=>d.classList.remove('show'));
+      document.querySelectorAll('.scard').forEach(x=>x.classList.remove('on'));
+      if(!wasOpen){target.classList.add('show');c.classList.add('on');target.scrollIntoView({behavior:'smooth',block:'nearest'});}
+    });
+  });
+  // Configurator and Sticky Bar coordination
+  const bar = document.getElementById('stickyBar');
+  const cwMbar = document.getElementById('cwMobileBar');
+  const colSection = document.getElementById('couleurs');
+  
+  window.addEventListener('scroll', () => {
+    const isMobile = window.innerWidth <= 760;
+    let colInView = false;
+    
+    if (colSection) {
+      const rect = colSection.getBoundingClientRect();
+      colInView = rect.top < window.innerHeight && rect.bottom > 0;
+    }
+    
+    if (colInView && isMobile) {
+      if (bar) bar.classList.remove('show');
+      if (cwMbar) cwMbar.style.display = 'block';
+    } else {
+      if (cwMbar) cwMbar.style.display = 'none';
+      if (bar) {
+        bar.classList.toggle('show', window.scrollY > 700);
+      }
+    }
+  });
+
+  // colorways configurator selection
+  const cwCards = document.querySelectorAll('.cw-card');
+  const cwHeroImgs = document.querySelectorAll('.cw-hero-img');
+  const cwMbarColor = document.getElementById('cwMbarColor');
+  const cwMbarCta = document.getElementById('cwMbarCta');
+  
+  cwCards.forEach(card => {
+    card.addEventListener('click', () => {
+      // 1. toggle selected class
+      cwCards.forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      
+      const color = card.dataset.color;
+      const colorName = card.dataset.name;
+      
+      // 2. update active image
+      cwHeroImgs.forEach(img => {
+        if (img.dataset.color === color) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+      
+      // 3. update mobile sticky bar
+      if (cwMbarColor) {
+        cwMbarColor.textContent = colorName;
+      }
+      if (cwMbarCta) {
+        cwMbarCta.href = 'https://wa.me/212698040572?text=' + encodeURIComponent('Salam ! Je veux commander le Sac Gymie en couleur ' + colorName + ' — 349 DH');
+      }
+    });
+  });
+  </script>
+
+  <!-- ════ Carrousel couleurs + Popup + Panier ════ -->
+  <script>
+  (function(){
+    const COLORS=[
+      {name:'Rose poudré', img:'assets/colors_clean/rose.webp'},
+      {name:'Bleu ciel',   img:'assets/colors_clean/bleu.webp'},
+      {name:'Noir',        img:'assets/colors_clean/noir.webp'},
+      {name:'Beige sable', img:'assets/colors_clean/beige.webp'},
+      {name:'Jaune pastel',img:'assets/colors_clean/jaune.webp'}
+    ];
+    const PHONE='212698040572', PRICE=349, PRODUCT='Le Sac Gymie';
+    let idx=0, paused=false, auto=null;
+    const gmain=document.getElementById('gmain');
+    const thumbs=Array.from(document.querySelectorAll('#galThumbs .media'));
+    const cur=()=>COLORS[idx];
+
+    function setColor(i, manual){
+      idx=(i%COLORS.length+COLORS.length)%COLORS.length;
+      if(gmain) gmain.src=cur().img;
+      thumbs.forEach((t,j)=>t.classList.toggle('on', j===idx));
+      if(manual){ paused=true; setTimeout(()=>{paused=false;}, 7000); }
+    }
+    function startAuto(){ clearInterval(auto); auto=setInterval(()=>{ if(!paused) setColor(idx+1); }, 2600); }
+    thumbs.forEach((t,j)=> t.addEventListener('click', e=>{ e.stopPropagation(); setColor(j,true); }));
+    const galMain=document.getElementById('galMain');
+    if(galMain){
+      galMain.addEventListener('click', openModal);
+      galMain.addEventListener('mouseenter',()=>paused=true);
+      galMain.addEventListener('mouseleave',()=>{ if(!modal.classList.contains('show')) paused=false; });
+    }
+    startAuto();
+
+    /* ---- POPUP PRODUIT ---- */
+    const modal=document.getElementById('modal');
+    function waProduct(){ return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent('Salam ! Je veux commander '+PRODUCT+' en couleur '+cur().name+' — '+PRICE+' DH (livraison incluse)'); }
+    function openModal(){
+      paused=true;
+      document.getElementById('modalImg').src=cur().img;
+      document.getElementById('modalColor').textContent=cur().name;
+      document.getElementById('modalWa').href=waProduct();
+      modal.classList.add('show');
+    }
+    function closeModal(){ modal.classList.remove('show'); paused=false; }
+    document.getElementById('modalClose').addEventListener('click',closeModal);
+    modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
+    document.getElementById('modalAdd').addEventListener('click', ()=>{
+      addToCart({name:PRODUCT, color:cur().name, price:PRICE, img:cur().img});
+      closeModal(); openCart();
+    });
+
+    /* ---- PANIER (localStorage + mémoire) ---- */
+    const KEY='gymie_cart';
+    let cart=(()=>{ try{return JSON.parse(localStorage.getItem(KEY))||[];}catch(e){return [];} })();
+    function persist(){ try{localStorage.setItem(KEY, JSON.stringify(cart));}catch(e){} }
+    function addToCart(it){ cart.push(it); persist(); renderCart(); }
+    function removeAt(i){ cart.splice(i,1); persist(); renderCart(); }
+
+    const cartCount=document.getElementById('cartCount');
+    const cartItems=document.getElementById('cartItems');
+    const cartTotalEl=document.getElementById('cartTotal');
+    const checkout=document.getElementById('cartCheckout');
+    function renderCart(){
+      const n=cart.length;
+      if(cartCount){ cartCount.textContent=n; cartCount.hidden=(n===0); }
+      if(cartItems){
+        cartItems.innerHTML = n===0
+          ? '<div class="cart-empty">Votre panier est vide.</div>'
+          : cart.map((it,i)=>'<div class="ci"><img src="'+it.img+'" alt=""><div><b>'+it.name+'</b><small>'+it.color+'</small><div class="ci-price">'+it.price+' DH</div></div><button class="ci-del" data-i="'+i+'" aria-label="Retirer">×</button></div>').join('');
+        cartItems.querySelectorAll('.ci-del').forEach(b=> b.addEventListener('click',()=> removeAt(parseInt(b.dataset.i,10))));
+      }
+      const total=cart.reduce((s,it)=>s+it.price,0);
+      if(cartTotalEl) cartTotalEl.textContent=total+' DH';
+      if(checkout){
+        if(n===0){ checkout.style.opacity=.45; checkout.style.pointerEvents='none'; checkout.href='#'; }
+        else{
+          checkout.style.opacity=1; checkout.style.pointerEvents='auto';
+          const lines=cart.map(it=>'- '+it.name+' ('+it.color+') : '+it.price+' DH').join('\n');
+          checkout.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent('Salam ! Je veux commander :\n'+lines+'\nTotal : '+total+' DH (livraison gratuite incluse)');
+        }
+      }
+    }
+    const cartOverlay=document.getElementById('cartOverlay');
+    function openCart(){ cartOverlay.classList.add('show'); }
+    function closeCart(){ cartOverlay.classList.remove('show'); }
+    document.getElementById('cartBtn').addEventListener('click', openCart);
+    document.getElementById('cartClose').addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', e=>{ if(e.target===cartOverlay) closeCart(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeCart(); } });
+    renderCart();
+
+    /* ---- Apparition douce au défilement ---- */
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      const sel='.prob .ps, .how .step, .app-row, .colors .media, .results .rcard, .system .scard, .perks .perk, .sole-card, .cutaway-container, section h2, section .lead, section .eyebrow';
+      const els=document.querySelectorAll(sel);
+      els.forEach(el=>{
+        el.classList.add('reveal');
+        const sibs=el.parentElement?Array.prototype.indexOf.call(el.parentElement.children, el):0;
+        el.style.transitionDelay=((sibs%4)*70)+'ms';
+      });
+      const io=new IntersectionObserver((ents)=>{ ents.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+      els.forEach(el=>io.observe(el));
+    }
+  })();
+  </script>
+</body>
+</html>

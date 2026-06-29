@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Serviette Gymie — 79 DH · Livraison incluse</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="produit.css">
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="index.html" class="logo"><span class="l1">g</span><span class="l2">y</span><span class="l3">m</span><span class="l4">i</span><span class="l5">e</span></a>
+  <a href="index.html" class="back">← Retour</a>
+</div></nav>
+
+<main class="wrap pdp">
+  <div class="gallery">
+    <div class="hero"><img id="hero" src="assets/webp/towel_bench.webp" alt="La serviette de banc Gymie"></div>
+  </div>
+
+  <div class="info">
+    <span class="eyebrow">LA SERVIETTE DE BANC</span>
+    <h1>Une barrière entre vous et la machine.</h1>
+    <p class="lead">Microfibre absorbante côté peau, dos imperméable qui isole du banc. Elle s'étale sur les machines et reste en place pendant la séance.</p>
+
+    <div class="price"><span class="now">79 DH</span><span class="old">149 DH</span><span class="save">-47%</span></div>
+    <div class="ship">Livraison gratuite partout au Maroc · 24–48h</div>
+
+    <div class="swatches">
+      <span class="lbl">Couleur souhaitée : <span id="cname">Rose poudré</span></span>
+      <div class="sw-row" id="swatches">
+        <span class="sw on" style="background:#E89CAE" data-name="Rose poudré"></span>
+        <span class="sw" style="background:#A9C4DE" data-name="Bleu ciel"></span>
+        <span class="sw" style="background:#2C2C2C" data-name="Noir"></span>
+        <span class="sw" style="background:#E4D5C3" data-name="Beige sable"></span>
+        <span class="sw" style="background:#EBD98C" data-name="Jaune pastel"></span>
+      </div>
+      <p class="sw-name">Précisez votre couleur au moment de la commande.</p>
+    </div>
+
+    <ul class="feats">
+      <li><b>Microfibre double-boucle</b> — douce et très absorbante</li>
+      <li><b>Dos imperméable</b> — fait barrière avec le banc</li>
+      <li><b>Traitement aux ions d'argent</b> — anti-odeurs</li>
+      <li><b>Lavable en machine</b> — à 30°C, séchage rapide</li>
+      <li><b>Format banc</b> — s'étale sur les machines et tapis</li>
+    </ul>
+
+    <a class="btn-cta" id="cta" href="#">Commander sur WhatsApp — 79 DH</a>
+    <div class="cod"><span>💵 Paiement à la livraison</span><span>🚚 Livraison incluse</span><span>🔒 Garantie 7 jours</span></div>
+  </div>
+</main>
+
+<div class="mbuy"><a class="btn-cta" id="ctaMobile" href="#">Commander — 79 DH</a></div>
+
+<script>
+const PHONE='212698040572';
+let color='Rose poudré';
+function waLink(){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent('Salam ! Je veux commander La Serviette Gymie en couleur '+color+' — 79 DH (livraison incluse)');}
+function refresh(){document.getElementById('cta').href=waLink();document.getElementById('ctaMobile').href=waLink();}
+document.querySelectorAll('#swatches .sw').forEach(s=>{
+  s.addEventListener('click',()=>{
+    document.querySelectorAll('#swatches .sw').forEach(x=>x.classList.remove('on'));
+    s.classList.add('on');
+    color=s.dataset.name;
+    document.getElementById('cname').textContent=color;
+    refresh();
+  });
+});
+refresh();
+</script>
+</body>
+</html>
