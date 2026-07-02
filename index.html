@@ -1978,7 +1978,7 @@ body{background:#FCE9EC}
     var target = e.target.closest('a');
     if (target && target.href && target.href.includes('wa.me')) {
       if (typeof fbq === 'function') {
-        fbq('track', 'Lead');
+        fbq('track', 'Purchase', {currency: 'MAD', value: 1});
       }
       if (!target.getAttribute('target')) {
         target.setAttribute('target', '_blank');
