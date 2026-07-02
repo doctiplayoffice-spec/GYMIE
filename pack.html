@@ -83,5 +83,18 @@ document.querySelectorAll('#swatches .sw').forEach(s=>{
 });
 refresh();
 </script>
+<script>
+  document.addEventListener('click', function(e) {
+    var target = e.target.closest('a');
+    if (target && target.href && target.href.includes('wa.me')) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+      if (!target.getAttribute('target')) {
+        target.setAttribute('target', '_blank');
+      }
+    }
+  });
+</script>
 </body>
 </html>
